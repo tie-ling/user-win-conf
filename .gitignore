@@ -1,0 +1,33 @@
+.config/scoop/config.json
+AppData/Local
+AppData/LocalLow
+AppData/Roaming/Adobe
+AppData/Roaming/Microsoft
+AppData/Roaming/.emacs.d
+AppData/Roaming/Gpg4win
+AppData/Roaming/gnupg
+Application Data/
+Cookies
+Desktop
+Documents
+Downloads
+Local Settings
+My Documents
+NetHood
+OneDrive
+Pictures
+PrintHood
+Recent
+scoop/apps
+scoop/buckets
+scoop/cache
+scoop/shims
+scoop/persist/notepadplusplus
+scoop/persist/ungoogled-chromium
+Searches
+SendTo
+Start Menu
+Templates
+ntuser*
+*~
+.ssh/known_hosts
