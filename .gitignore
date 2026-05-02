@@ -24,6 +24,7 @@ scoop/cache
 scoop/shims
 scoop/persist/notepadplusplus
 scoop/persist/ungoogled-chromium
+scoop/persist/dnscrypt-proxy
 Searches
 SendTo
 Start Menu
@@ -31,3 +32,10 @@ Templates
 ntuser*
 *~
 .ssh/known_hosts
+Projects
+Favorites
+/scoop/persist/rufus/
+cache
+*cache
+.lesshst
+NTUSER.DAT*

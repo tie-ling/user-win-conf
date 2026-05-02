@@ -1,0 +1,5 @@
+[user]
+	email = yc@example.com
+	name = Yan Cao
+[core]
+	sshCommand = 'C:\\Windows\\System32\\OpenSSH\\ssh.exe'
