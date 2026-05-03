@@ -29,7 +29,7 @@
   (enable-local-variables :safe)
   (face-font-family-alternatives
    '(("Iosevka" "Noto Sans Mono CJK SC")
-     ("Libertinus Serif" "Noto Serif CJK SC")))
+     ("Libertinus Serif" "Noto Sans Mono CJK SC")))
   (indent-tabs-mode nil)
   (inhibit-startup-screen t)
   (menu-bar-mode t)
