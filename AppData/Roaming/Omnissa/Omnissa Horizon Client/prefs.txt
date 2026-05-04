@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <RecentServer serverName="horizon.htw-berlin.de" serverGuid="c512adb7-82d9-42d0-b25d-0deef628edf2" workspaceOneHostname="" hasValidCert="true" mruUsername="login\s0596965" mruDomain="login" lastLogInAsCurrentUser="false">
+    <ShortCuts />
+    <RecentDesktop desktopID="cn=fb4_wiw_tc14-nx2xxx-pool_dem,ou=applications,dc=vdi,dc=vmware,dc=int" scaledModeEnabled="false">
+      <LastDisplaySize>
+        <SelectedMonitors />
+      </LastDisplaySize>
+      <ConnectUSBDevicesOnStartup />
+      <ConnectUSBDevicesOnInsert />
+      <LastMonitor />
+    </RecentDesktop>
+    <ShadowSettings />
+    <SecondaryServerList />
+    <FileRedirection />
+  </RecentServer>
+  <BrokerJumpList>
+    <BrokerJump BrokerName="horizon.htw-berlin.de" BrokerArguments="horizon-client://horizon.htw-berlin.de/" />
+  </BrokerJumpList>
+  <DesktopJumpList>
+    <DesktopJump DesktopName="FB4 WIW TC14" DesktopArguments="horizon-client://s0596965@horizon.htw-berlin.de/cn=fb4_wiw_tc14-nx2xxx-pool_dem,ou=applications,dc=vdi,dc=vmware,dc=int?domainName=login&amp;desktopProtocol=BLAST&amp;desktopLayout=MultiMonitor" JumpListIconPath="C:\Program Files\Omnissa\Omnissa Horizon Client\Assets\desktop.ico" />
+  </DesktopJumpList>
+  <sharingList shareHomeDirectory="false" allowAccessRemovable="false" showPromptDlg="false" />
+</Root>

@@ -2,6 +2,8 @@
 
 (use-package emacs
   :config
+  (set-default-coding-systems 'utf-8)
+
   (defun set-input-method-chinese ()
     (interactive)
     (set-input-method "pyim"))
