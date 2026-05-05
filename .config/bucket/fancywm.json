@@ -16,8 +16,7 @@
     }
   },
   "bin": [
-    "FancyWM.exe",
-    "FancyWM-GUI.exe"
+    "FancyWM.exe"
   ],
   "shortcuts": [
     [

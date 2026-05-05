@@ -1,5 +1,6 @@
 [user]
-	email = yc@example.com
+	email = git@apvc.uk
 	name = Yan Cao
 [core]
 	sshCommand = 'C:\\Windows\\System32\\OpenSSH\\ssh.exe'
+	editor = emacsclientw
