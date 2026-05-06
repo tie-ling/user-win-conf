@@ -44,3 +44,6 @@ NTUSER.DAT*
 scoop/persist/vlc/portable
 /AppData/Roaming/Verein zur Förderung eines Deutschen Forschungsnetzes/
 IntelGraphicsProfiles
+AppData/Roaming/ghc/ghci_history
+OpenVPN
+Videos

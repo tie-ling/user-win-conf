@@ -169,6 +169,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(adaptive-wrap ledger-mode magit pyim pyim-basedict vertico
-                   visual-fill))
+   '(adaptive-wrap ledger-mode pyim pyim-basedict vertico visual-fill))
  '(ring-bell-function 'ignore))
