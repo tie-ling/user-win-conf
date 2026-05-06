@@ -110,9 +110,6 @@
    (ledger-report-native-highlighting-arguments '("--color=always")))
   :mode ("\\.hledger\\'" "\\.ledger\\'"))
 
-(use-package magit
-  :ensure t)
-
 (use-package org
   :config
   (set-face-attribute 'org-block nil :inherit 'fixed-pitch)
