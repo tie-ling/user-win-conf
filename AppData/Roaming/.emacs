@@ -27,6 +27,8 @@
   (completion-ignore-case t)
   (custom-enabled-themes '(modus-operandi) nil nil)
   (default-input-method "german")
+  (display-battery-mode t)
+  (display-time-mode t)
   (electric-pair-mode t)
   (enable-local-variables :safe)
   (face-font-family-alternatives
