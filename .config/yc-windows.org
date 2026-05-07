@@ -48,6 +48,9 @@ Use UTF-8 for worldwide language support
 * touchpad 3-finger click
 change to middle button
 
+1. switch desktop and show desktop
+2. tap for middle button
+
 * Install fonts
 https://stackoverflow.com/questions/13279014/emacs-bad-font-rendering-under-windows
 MUST USE TTF fonts: OTF fonts are badly rendered under windows
@@ -112,17 +115,7 @@ git clone git@github.com:tie-ling/user-projects $HOME/Projects
 * install custom keyboard layout registry at $HOME/.config/yc-layout.reg
 
 * launch emacs (not client)
-
-* visit this windows.org file
-
-* windows utc time
-reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
-
-
-* old context menu
-reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
-
-then reboot
+in order to install packages for the first time
 
 * launch ungoogled chromium
 install ublock origin, disable remote fonts
@@ -147,6 +140,19 @@ save bitlocker key to password repo
 as admin, run cmd and
 dnscrypt-proxy -service install
 
+
+* visit this windows.org file
+
+* windows utc time
+reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+
+
+* old context menu
+reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
+
+then reboot
+
+
 * install office
 
 
@@ -154,6 +160,7 @@ dnscrypt-proxy -service install
 
 * activate office with kms not Ohook
 
+* limit battery charge to 80%
 
 * scoop
 
