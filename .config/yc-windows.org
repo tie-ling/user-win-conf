@@ -4,6 +4,8 @@ no compression, just copy, volume size 2048m
 
 7zz a -t7z -m0=Copy -v2048m office.7z O365ProPlusRetail.img
 
+* copy drivers, office, font and registry settings to windows install disk
+
 * Boot to BIOS and erase disk
 
 * Install Windows LTSC
@@ -14,13 +16,7 @@ no compression, just copy, volume size 2048m
 
 * Skip all data collection
 
-* Disable Windows Update in Group Policy
-run gpedit.msc
-
-Computer Configuration. Administrative Templates. Windows Components
-Windows Update. Manage end user experience. Configure Automatic
-Updates.  Disabled.
-
+* import all my registry settings and reboot
 
 * Windows Defender
 disable smart app control
@@ -39,17 +35,6 @@ remember to disable ipv6 in adapter settings
 * Windows Accessibility
 Visual Effects, Disable Animation.  Alway Show scrollbars.
 Transparency Effects.
-
-* Windows Time & Language
-Administrative Language settings
-
-Use UTF-8 for worldwide language support
-
-* touchpad 3-finger click
-change to middle button
-
-1. switch desktop and show desktop
-2. tap for middle button
 
 * Install fonts
 https://stackoverflow.com/questions/13279014/emacs-bad-font-rendering-under-windows
@@ -112,8 +97,6 @@ git reset --hard
 
 git clone git@github.com:tie-ling/user-projects $HOME/Projects
 
-* install custom keyboard layout registry at $HOME/.config/yc-layout.reg
-
 * launch emacs (not client)
 in order to install packages for the first time
 
@@ -139,19 +122,6 @@ save bitlocker key to password repo
 * install dnscrypt-proxy as a service
 as admin, run cmd and
 dnscrypt-proxy -service install
-
-
-* visit this windows.org file
-
-* windows utc time
-reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
-
-
-* old context menu
-reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
-
-then reboot
-
 
 * install office
 

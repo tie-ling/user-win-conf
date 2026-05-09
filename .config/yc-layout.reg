@@ -1,5 +1,8 @@
 Windows Registry Editor Version 5.00
 
+; how to export registry settings
+; REG export HKCU\Control Panel\Accessibility %userprofile%\desktop\SettingsA.reg /y
+
 ; The hex data is in five groups of four bytes:
 ;   00,00,00,00,\    header version (always 00000000)
 ;   00,00,00,00,\    header flags (always 00000000)
@@ -25,3 +28,42 @@ Windows Registry Editor Version 5.00
                    1d,00,3a,00,\
                    1d,e0,27,00,\
                    00,00,00,00
+
+; set windows time to utc
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]
+"RealTimeIsUniversal"=dword:00000001
+
+; enable utf-8 for world wide language support
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\CodePage]
+"ACP"="65001"
+"OEMCP"="65001"
+"MACCP"="65001"
+
+; configure automatic updates to disabled
+; i will do bi-monthly updates myself
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUpdate"=dword:00000001
+
+; touchpad: three finger tap for middle button, slide for desktop switch
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PrecisionTouchPad]
+"AAPThreshold"=dword:00000002
+"CursorSpeed"=dword:0000000a
+"EnableEdgy"=dword:00000001
+"LeaveOnWithMouse"=dword:00000001
+"PanEnabled"=dword:00000001
+"RightClickZoneEnabled"=dword:00000001
+"ScrollDirection"=dword:00000000
+"TapAndDrag"=dword:00000001
+"TapsEnabled"=dword:00000001
+"TwoFingerTapEnabled"=dword:00000001
+"ZoomEnabled"=dword:00000001
+"ThreeFingerTapEnabled"=dword:00000004
+"ThreeFingerSlideEnabled"=dword:00000002
+"FourFingerSlideEnabled"=dword:00000000
+"FourFingerTapEnabled"=dword:00000000
+
+; disable windows 11 context menu
+; restore old windows 10 context menu
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
+@=""
