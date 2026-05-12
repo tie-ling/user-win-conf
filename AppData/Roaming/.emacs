@@ -32,8 +32,8 @@
   (electric-pair-mode t)
   (enable-local-variables :safe)
   (face-font-family-alternatives
-   '(("Iosevka" "Noto Sans Mono CJK SC")
-     ("Libertinus Serif" "Noto Sans Mono CJK SC")))
+   '(("JuliaMono" "Noto Sans Mono CJK SC")
+     ("Segoe UI" "Noto Sans Mono CJK SC")))
   (indent-tabs-mode nil)
   (inhibit-startup-screen t)
   (menu-bar-mode t)
@@ -76,15 +76,13 @@
   (shr-use-colors nil))
 
 (use-package visual-fill
-  :ensure t)
+  :ensure t
+  :hook
+  ((visual-line-mode . (lambda () (visual-fill-mode 'toggle)))
+   (visual-line-mode . (lambda () (adaptive-wrap-prefix-mode 'toggle)))))
 
 (use-package adaptive-wrap
   :ensure t)
-
-(use-package visual-line-mode
-  :hook
-  ((visual-line-mode . visual-fill-mode)
-   (visual-line-mode . adaptive-wrap-prefix-mode)))
 
 (use-package text-mode
   :hook
@@ -161,8 +159,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Iosevka" :height 130))))
- '(variable-pitch ((t (:family "Libertinus Serif" :height 140)))))
+ '(default ((t (:family "JuliaMono" :height 110))))
+ '(variable-pitch ((t (:family "Segoe UI" :height 140)))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
