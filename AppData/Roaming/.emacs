@@ -33,7 +33,7 @@
   (enable-local-variables :safe)
   (face-font-family-alternatives
    '(("JuliaMono" "Noto Sans Mono CJK SC")
-     ("Segoe UI" "Noto Sans Mono CJK SC")))
+     ("Libertinus Serif" "SimSun")))
   (indent-tabs-mode nil)
   (inhibit-startup-screen t)
   (menu-bar-mode t)
@@ -160,7 +160,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "JuliaMono" :height 110))))
- '(variable-pitch ((t (:family "Segoe UI" :height 140)))))
+ '(variable-pitch ((t (:family "Libertinus Serif" :height 140)))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

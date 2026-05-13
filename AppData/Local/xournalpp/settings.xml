@@ -5,8 +5,8 @@
   <property name="minimumPressure" value="0.05"/>
   <property name="pressureMultiplier" value="1"/>
   <property name="zoomGesturesEnabled" value="false"/>
-  <property name="selectedToolbar" value="Minimal Left"/>
-  <property name="lastSavePath" value=""/>
+  <property name="selectedToolbar" value="Minimal Left Copy"/>
+  <property name="lastSavePath" value="C:\Users\User\Documents\xopp"/>
   <property name="lastOpenPath" value=""/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
@@ -14,9 +14,9 @@
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="-1"/>
-  <property name="mainWndWidth" value="1898"/>
-  <property name="mainWndHeight" value="1024"/>
-  <property name="maximized" value="false"/>
+  <property name="mainWndWidth" value="1907"/>
+  <property name="mainWndHeight" value="1045"/>
+  <property name="maximized" value="true"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="false"/>
   <property name="sidebarWidth" value="50"/>
@@ -35,7 +35,7 @@
   <property name="layoutBottomToTop" value="false"/>
   <property name="numPairsOffset" value="1"/>
   <!--The icon theme, allowed values are "disabled", "onDrawOfLastPage", and "onScrollOfLastPage"-->
-  <property name="emptyLastPageAppend" value="disabled"/>
+  <property name="emptyLastPageAppend" value="onDrawOfLastPage"/>
   <property name="presentationMode" value="false"/>
   <!--Which GUI elements are shown in default view mode, separated by a colon (,)-->
   <property name="defaultViewModeAttributes" value="showMenubar,showToolbar"/>
@@ -44,7 +44,7 @@
   <!--Which GUI elements are shown in presentation view mode, separated by a colon (,)-->
   <property name="presentationViewModeAttributes" value="goFullscren,showToolbar"/>
   <!--The cursor icon used with a stylus, allowed values are "none", "dot", "big", "arrow"-->
-  <property name="stylusCursorType" value="arrow"/>
+  <property name="stylusCursorType" value="big"/>
   <!--The eraser cursor visibility used with a stylus, allowed values are "never", "always", "hover", "touch"-->
   <property name="eraserVisibility" value="always"/>
   <!--The icon theme, allowed values are "iconsColor", "iconsLucide"-->
@@ -157,11 +157,11 @@
       <attribute name="color" type="hex" value="ff000000"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="size" type="string" value="thin"/>
-      <attribute name="strokeType" type="string" value="none"/>
+      <attribute name="strokeType" type="string" value="standard"/>
       <attribute name="tool" type="string" value="pen"/>
     </data>
     <data name="eraser">
-      <attribute name="eraserMode" type="string" value="none"/>
+      <attribute name="eraserMode" type="string" value="deleteStroke"/>
       <attribute name="size" type="string" value="none"/>
       <attribute name="tool" type="string" value="eraser"/>
     </data>
@@ -209,8 +209,8 @@
     <data name="drawRect"/>
     <data name="drawSpline"/>
     <data name="eraser">
-      <attribute name="size" type="string" value="MEDIUM"/>
-      <attribute name="type" type="string" value="default"/>
+      <attribute name="size" type="string" value="VERY_FINE"/>
+      <attribute name="type" type="string" value="deleteStroke"/>
     </data>
     <data name="hand"/>
     <data name="highlighter">
@@ -234,7 +234,7 @@
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="THIN"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject"/>
