@@ -50,6 +50,7 @@
   (scroll-bar-mode t)
   (tab-always-indent 'complete)
   (tool-bar-mode nil)
+  (treesit-language-source-alist '((sml "https://github.com/MatthewFluet/tree-sitter-sml" "v0.22.0" nil "gcc" "cpp")))
   (user-mail-address "yc@apvc.uk"))
 
 (require 'package)
@@ -60,10 +61,6 @@
 ;; (add-to-list 'package-archives
 ;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
-
-(add-to-list
- 'treesit-language-source-alist
- '((sml "https://github.com/MatthewFluet/tree-sitter-sml" "v0.22.0" nil "gcc" "cpp")))
 
 (use-package sml-ts-mode
   :ensure t)
@@ -176,8 +173,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(adaptive-wrap haskell-ts-mode ledger-mode llama pyim-basedict
-                   sml-ts-mode transient vertico visual-fill
-                   with-editor))
+ '(package-selected-packages nil)
  '(ring-bell-function 'ignore))
