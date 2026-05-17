@@ -180,3 +180,14 @@ do not login the account inside windows settings.
 * change dns server to 127.0.0.1
 
 * maybe install texlive
+
+* powerpoint language
+With your document open:
+
+Press ALT+F11
+
+If you don't see a window labeled "Immediate", press CTRL+G to make it appear.
+
+Type this into the Immediate window then press ENTER:
+
+activepresentation.DefaultLanguageID = msoLanguageIDGerman

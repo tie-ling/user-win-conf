@@ -5,17 +5,16 @@
 .lesshst
 .ssh/known_hosts
 AppData/Local
-AppData/Local/gopass/gopass/reminder/overdue
 AppData/LocalLow
 AppData/Roaming/.emacs.d
 AppData/Roaming/Adobe
-AppData/Roaming/Gpg4win
+AppData/Roaming/Gpg4win/kleopatrarc
 AppData/Roaming/Microsoft
-AppData/Roaming/Verein zur Förderung eines Deutschen Forschungsnetzes/
+AppData/Roaming/Verein zur Förderung eines Deutschen Forschungsnetzes
 AppData/Roaming/ghc/ghci_history
 AppData/Roaming/gnupg
 AppData/Roaming/FancyWM/themes
-Application Data/
+Application Data
 Cookies
 Desktop
 Documents
@@ -29,7 +28,6 @@ Saved Games
 IntelGraphicsProfiles
 Local Settings
 My Documents
-NTUSER.DAT*
 NetHood
 OneDrive
 OpenVPN
@@ -43,6 +41,7 @@ Start Menu
 Templates
 Videos
 cache
+NTUSER*
 ntuser*
 scoop/apps
 scoop/buckets
@@ -53,4 +52,5 @@ scoop/persist/ungoogled-chromium
 scoop/persist/vlc/portable
 scoop/persist/rufus
 scoop/persist/pwsh
+scoop/persist/winscp
 scoop/shims

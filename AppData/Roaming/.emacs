@@ -61,6 +61,16 @@
 ;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
+(add-to-list
+ 'treesit-language-source-alist
+ '((sml "https://github.com/MatthewFluet/tree-sitter-sml" "v0.22.0" nil "gcc" "cpp")))
+
+(use-package sml-ts-mode
+  :ensure t)
+
+(use-package haskell-ts-mode
+  :ensure t)
+
 (use-package pyim
   :ensure t)
 
@@ -166,5 +176,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages nil)
+ '(package-selected-packages
+   '(adaptive-wrap haskell-ts-mode ledger-mode llama pyim-basedict
+                   sml-ts-mode transient vertico visual-fill
+                   with-editor))
  '(ring-bell-function 'ignore))
