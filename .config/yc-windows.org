@@ -191,3 +191,40 @@ If you don't see a window labeled "Immediate", press CTRL+G to make it appear.
 Type this into the Immediate window then press ENTER:
 
 activepresentation.DefaultLanguageID = msoLanguageIDGerman
+
+* scoop backup
+$jsonData = scoop export | ConvertFrom-Json
+
+PS C:\Users\User\Desktop> $jsonData.apps.name
+7zip
+adb
+claws-mail
+dark
+dnscrypt-proxy
+easyroam-np
+emacs
+fancywm
+gcc
+git
+gopass
+gopass-jsonapi
+gpg4win
+haskell
+hledger
+innounp
+lessmsi
+mupdf
+nomacs
+notepadplusplus
+omnissa-horizon-client-np
+openvpn
+pdfcpu
+polyml
+pwsh
+qrencode
+rufus
+sumatrapdf
+ungoogled-chromium
+vlc
+winscp
+xournalpp
