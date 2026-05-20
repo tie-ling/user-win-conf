@@ -73,3 +73,8 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 "UserPreferencesMask"=hex:91,12,03,80,10,00,00,00
 "ActiveWndTrkTimeout"=dword:00000064
+
+; enable long path
+; https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+"LongPathsEnabled"=dword:00000001
