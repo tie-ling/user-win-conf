@@ -200,8 +200,6 @@ PS C:\Users\User\Desktop> $jsonData.apps.name
 adb
 claws-mail
 dark
-dnscrypt-proxy
-easyroam-np
 emacs
 fancywm
 gcc
@@ -209,22 +207,34 @@ git
 gopass
 gopass-jsonapi
 gpg4win
-haskell
 hledger
-innounp
 lessmsi
-mupdf
 nomacs
 notepadplusplus
 omnissa-horizon-client-np
+opentabletdriver
 openvpn
-pdfcpu
 polyml
 pwsh
-qrencode
 rufus
 sumatrapdf
 ungoogled-chromium
+vcredist2022
 vlc
+windowsdesktop-runtime-10.0
 winscp
 xournalpp
+
+* opentabletdriver
+inside opentabletdriver, download and enable windows ink plugin
+https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk
+
+download and install
+https://github.com/X9VoiD/vmulti-bin/releases/
+
+Download the latest release here.
+Extract the archive.
+Run install_hiddriver.bat as administrator.
+
+autoustart
+cp 'C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps\OpenTabletDriver.lnk' 'C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\OpenTabletDriver.lnk'
