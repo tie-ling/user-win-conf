@@ -1,5 +1,5 @@
 {
-  "ActivationHotkey": "Alt_Win",
+  "ActivationHotkey": "None_None",
   "ActivateOnCapsLock": false,
   "ShowStartupWindow": false,
   "NotifyVirtualDesktopServiceIncompatibility": true,
