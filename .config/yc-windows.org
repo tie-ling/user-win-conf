@@ -212,8 +212,14 @@ autohotkey script for fancywm
 create shortcut at $home/.config, then copy shortcut to shell:startup
 
 * disable cpu boost when plugged in
-go to eshell, run powercfg /q to show all options
+go to eshell, run
+
+powercfg /q to show all normal options
+PowerCfg /qh show all hidden plus normal options
+
 run powercfg /l to show profile guid
+
+(hidden settings need to be made visible with registry edits first)
 
 example: powercfg /l
 Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e Balanced
@@ -224,22 +230,13 @@ Subgroup GUID: 54533251-82be-4824-96c1-47b60b740d00  (Processor power management
       Possible Setting Index: 000
       Possible Setting Friendly Name: Disabled
 
+; disable processor boost
 powercfg /SETACVALUEINDEX 381b4222-f694-41f0-9685-ff5bb260df2e SUB_PROCESSOR PERFBOOSTMODE 000
 powercfg /SETDCVALUEINDEX 381b4222-f694-41f0-9685-ff5bb260df2e SUB_PROCESSOR PERFBOOSTMODE 000
 
 ; set minimum cpu to 0%
-powercfg  /SETACVALUEINDEX 381b4222-f694-41f0-9685-ff5bb260df2e    SUB_PROCESSOR  PROCTHROTTLEMIN 0x00000000
-powercfg  /SETDCVALUEINDEX 381b4222-f694-41f0-9685-ff5bb260df2e    SUB_PROCESSOR  PROCTHROTTLEMIN 0x00000000
-
-; set amd video card to battery saving on ac
-powercfg /SETACVALUEINDEX 381b4222-f694-41f0-9685-ff5bb260df2e f693fb01-e858-4f00-b20f-f30e12ac06d6 191f65b5-d45c-4a4f-8aae-1ab8bfd980e6 000
-powercfg /SETACVALUEINDEX 381b4222-f694-41f0-9685-ff5bb260df2e c763b4ec-0e50-4b6b-9bed-2b92a6ee884e 7ec1751b-60ed-4588-afb5-9819d3d77d90 000
-
-
-  Subgroup GUID: c763b4ec-0e50-4b6b-9bed-2b92a6ee884e  (AMD Power Slider)
-    Power Setting GUID: 7ec1751b-60ed-4588-afb5-9819d3d77d90  (Overlay)
-      Possible Setting Index: 000
-      Possible Setting Friendly Name: Battery saver
+powercfg  /SETACVALUEINDEX 381b4222-f694-41f0-9685-ff5bb260df2e    SUB_PROCESSOR  PROCTHROTTLEMIN 0x00000005
+powercfg  /SETDCVALUEINDEX 381b4222-f694-41f0-9685-ff5bb260df2e    SUB_PROCESSOR  PROCTHROTTLEMIN 0x00000005
 
 
 go to control panel, hardware and sound, power options, edit plan
