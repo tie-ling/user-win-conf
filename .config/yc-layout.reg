@@ -78,13 +78,3 @@ Windows Registry Editor Version 5.00
 ; https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
 "LongPathsEnabled"=dword:00000001
-
-; show performance boost option, in order to disable it
-; go to control panel, hardware and sound, power options, edit plan
-; settings, change advanced power settings
-; minimum processer state, plugged in: 5%
-; processor performance boost mode: disabled
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\be337238-0d82-4146-a960-4f3749d470c7]
-"Attributes"=dword:00000002
-
-; show all possible settings, run powercfg /q

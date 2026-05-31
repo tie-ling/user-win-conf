@@ -44,6 +44,7 @@
   (modus-themes-italic-constructs t)
   (modus-themes-mixed-fonts t)
   (network-security-level 'paranoid)
+  (ring-bell-function 'ignore)
   (read-buffer-completion-ignore-case t)
   (read-file-name-completion-ignore-case t)
   (require-final-newline t)
@@ -55,17 +56,9 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;; Comment/uncomment this line to enable MELPA Stable if desired.
-;; See `package-archive-priorities` and `package-pinned-packages`.
-;; Most users will not need or want to do this.
-;; (add-to-list 'package-archives
-;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
 (use-package sml-ts-mode
-  :ensure t)
-
-(use-package haskell-ts-mode
   :ensure t)
 
 (use-package pyim
@@ -119,8 +112,12 @@
   :config
   (set-face-attribute 'org-block nil :inherit 'fixed-pitch)
   :bind
-  (("C-c a" . org-agenda))
+  (("C-c a" . org-agenda)
+   ("C-c t" . org-timer-set-timer))
   :custom
+  (org-clock-sound "C:/Windows/Media/Alarm01.wav")
+  (org-agenda-custom-commands '(("o" "Overdue TODOs" tags-todo "+TIMESTAMP<\"<today>\"")))
+  (org-timer-default-timer 20)
   (org-agenda-inhibit-startup t)
   (org-agenda-window-setup 'current-window)
   (org-agenda-start-with-log-mode nil)
@@ -135,31 +132,7 @@
   (org-directory "/Users/User/Projects/org")
   (org-agenda-span 'day)
   (org-display-custom-times nil)
-  (org-time-stamp-custom-formats '("%m-%d" . "%H:%M"))
-  (org-export-initial-scope 'buffer)
-  (org-export-backends '(ascii beamer html icalendar latex md odt))
-  (org-modules
-   '(ol-bbdb ol-bibtex ol-doi ol-eww ol-info ol-irc ol-mhe ol-rmail org-tempo))
-  (org-structure-template-alist
-   '(("a" . "export ascii")
-     ("c" . "center")
-     ("C" . "comment")
-     ("e" . "example")
-     ("E" . "export")
-     ("h" . "export html")
-     ("l" . "export latex")
-     ("q" . "quote")
-     ("s" . "src")
-     ("v" . "verse")
-     ("py" . "src python")))
-  :hook
-  ;; in org mode, do not use <> electric pairs, as this is used by
-  ;; org-tempo for structure templates
-  (org-mode . (lambda ()
-           (setq-local electric-pair-inhibit-predicate
-                   `(lambda (c)
-                  (if (char-equal c ?<) t
-                    (,electric-pair-inhibit-predicate c)))))))
+  (org-time-stamp-custom-formats '("%m-%d" . "%H:%M")))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -168,12 +141,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "JuliaMono" :height 110))))
  '(variable-pitch ((t (:family "Libertinus Serif" :height 140)))))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(adaptive-wrap haskell-ts-mode ledger-mode pyim-basedict sml-ts-mode
-                   vertico visual-fill))
- '(ring-bell-function 'ignore))
+
+(use-package tex-mode
+  :custom
+  (latex-run-command "C:/Users/User/scoop/apps/miktex/current/texmfs/install/miktex/bin/x64/miktex-pdflatex.exe"))
