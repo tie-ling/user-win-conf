@@ -41,7 +41,7 @@ https://stackoverflow.com/questions/13279014/emacs-bad-font-rendering-under-wind
 MUST USE TTF fonts: OTF fonts are badly rendered under windows
 otf渲染效果不好。
 
-Libertinus, Iosevka, noto cjk mono, noto cjk serif
+Libertinus, , noto cjk mono, noto cjk serif
 
 * connect to hotspot
 set to metered connection
@@ -157,15 +157,13 @@ Type this into the Immediate window then press ENTER:
 activepresentation.DefaultLanguageID = msoLanguageIDGerman
 
 * scoop backup
-$jsonData = scoop export | ConvertFrom-Json
-
-PS C:\Users\User\Desktop> $jsonData.apps.name
+run powershell command
+pwsh: (scoop export | ConvertFrom-Json).apps.name
 7zip
 adb
 autohotkey
 claws-mail
 dark
-dnscrypt-proxy
 easyroam-np
 emacs
 fancywm
@@ -175,14 +173,15 @@ gopass
 gopass-jsonapi
 gpg4win
 hledger
+innounp
 lessmsi
+miktex
 nomacs
 notepadplusplus
 omnissa-horizon-client-np
 opentabletdriver
 openvpn
 polyml
-pwsh
 qrencode
 rufus
 sumatrapdf
@@ -190,6 +189,7 @@ ungoogled-chromium
 vlc
 winscp
 xournalpp
+
 * opentabletdriver
 inside opentabletdriver, download and enable windows ink plugin
 https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk
