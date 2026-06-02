@@ -4,7 +4,7 @@ no compression, just copy, volume size 2048m
 
 7zz a -t7z -m0=Copy -v2048m office.7z O365ProPlusRetail.img
 
-* copy drivers, office, font and registry settings to windows install disk
+* copy drivers, office, font, .ssh dir and registry settings to windows install disk
 
 * Boot to BIOS and erase disk
 
@@ -16,7 +16,7 @@ no compression, just copy, volume size 2048m
 
 * Skip all data collection
 
-* import all my registry settings and reboot
+* copy .ssh dir to $HOME/
 
 * Windows Defender
 disable smart app control
@@ -24,11 +24,12 @@ disable smart app control
 Taskbar. Windows Defender. Apps & Browser Control.  Smart App Control
 settings
 
+* import all my registry settings and reboot
+import reg file from install disc
  
 * on another computer Download drivers from official website
-or Snappy Driver Installer
-https://www.glenn.delahoy.com/snappy-driver-installer-origin/
-remember to disable ipv6 in adapter settings
+do not use snappy driver installer
+fujitsu install u9311 (without m) driver
 
 * Install drivers
 
@@ -36,12 +37,10 @@ remember to disable ipv6 in adapter settings
 Visual Effects, Disable Animation.  Alway Show scrollbars.
 Transparency Effects.
 
-* Install fonts
-https://stackoverflow.com/questions/13279014/emacs-bad-font-rendering-under-windows
-MUST USE TTF fonts: OTF fonts are badly rendered under windows
-otf渲染效果不好。
+* enable bitlocker without microsoft account
+plug in an external drive.  launch control panel applet.
 
-Libertinus, , noto cjk mono, noto cjk serif
+save bitlocker key to external drive.  start encryption
 
 * connect to hotspot
 set to metered connection
@@ -50,28 +49,13 @@ set to metered connection
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
-scoop checkup
-enable longpaths support
-
 scoop install git
 scoop bucket add extras
+scoop bucket add versions
 
-
-* install programs from scoop
-# install git first
-scoop install git
-# enable extras bucket
-scoop bucket add extras
 # install programs
 scoop install [list]
 
-* download and restore .ssh dir
-go to github.com/tie-ling/user-win-conf/
-copy id_ed25519 raw link
-
-launch powershell
-mkdir ~/.ssh
-curl -o .ssh/id_ed25519 https://raw.githubusercontent.com
 
 * enable ssh agent
 # By default, the ssh-agent service is disabled. Configure it to start automatically.
@@ -97,53 +81,50 @@ git reset --hard
 
 git clone git@github.com:tie-ling/user-projects $HOME/Projects
 
-* launch emacs (not client)
-in order to install packages for the first time
+* install my own scoop bucket
+scoop install $HOME/.config/bucket/fancywm.json
 
 * launch ungoogled chromium
+install chrome web store
+go to github, search for ublock origin
+
 install ublock origin, disable remote fonts
 install noscript
 install gopassbridge
+install enhanced h264
 
 * import private gpg key
 launch kleopatra, import .config/yc-private-key.asc
 
-* enable bitlocker without microsoft account
-plug in an external drive.  launch control panel applet.
-
-save bitlocker key to external drive.  start encryption
-
+* backup bitlocker key
 right click bitlocker key, use kleopatra to encrypt
 
 save bitlocker key to password repo
 
+* launch emacs (not client)
+in order to install packages for the first time
 
+* Install fonts
+https://stackoverflow.com/questions/13279014/emacs-bad-font-rendering-under-windows
+MUST USE TTF fonts: OTF fonts are badly rendered under windows
+otf渲染效果不好。
 
-* install dnscrypt-proxy as a service
-as admin, run cmd and
-dnscrypt-proxy -service install
+Libertinus, , noto cjk mono, noto cjk serif
 
 * install office
 
 
 * activate windows
+massgrave.dev
 
 * activate office with kms not Ohook
 
 * limit battery charge to 80%
 
-* scoop
-
 * launch powerpoint, then login fh-account
 do not login the account inside windows settings.
 
 * set login password and pin
-
-* reenable ipv6 if needed
-
-* change dns server to 127.0.0.1
-
-* maybe install texlive
 
 * powerpoint language
 With your document open:
