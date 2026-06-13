@@ -143,7 +143,6 @@ pwsh: (scoop export | ConvertFrom-Json).apps.name
 7zip
 adb
 autohotkey
-claws-mail
 dark
 easyroam-np
 emacs
