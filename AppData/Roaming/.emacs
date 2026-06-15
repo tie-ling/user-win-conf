@@ -1,5 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 
+(global-unset-key (kbd "C-z"))
+
 (use-package emacs
   :config
   (set-default-coding-systems 'utf-8)
