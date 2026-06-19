@@ -68,12 +68,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
 @=""
 
-; enable mouse hover, but do not bring window to the top
-; the latter is for pop-up windows to function
-[HKEY_CURRENT_USER\Control Panel\Desktop]
-"UserPreferencesMask"=hex:91,12,03,80,10,00,00,00
-"ActiveWndTrkTimeout"=dword:00000064
-
 ; enable long path
 ; https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]

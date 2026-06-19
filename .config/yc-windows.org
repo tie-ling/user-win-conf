@@ -82,7 +82,7 @@ git reset --hard
 git clone git@github.com:tie-ling/user-projects $HOME/Projects
 
 * install my own scoop bucket
-scoop install $HOME/.config/bucket/fancywm.json
+scoop install $HOME/.config/bucket/
 
 * launch ungoogled chromium
 install chrome web store
@@ -142,11 +142,9 @@ run powershell command
 pwsh: (scoop export | ConvertFrom-Json).apps.name
 7zip
 adb
-autohotkey
 dark
 easyroam-np
 emacs
-fancywm
 gcc
 git
 gopass
@@ -190,6 +188,12 @@ cp 'C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Ap
 
 autohotkey script for fancywm
 create shortcut at $home/.config, then copy shortcut to shell:startup
+
+* install icloud for the online drive that i paid for
+
+* claws-mail
+use gyuchen86@icloud.com for auto configuration.
+but change to guo@wanderian.com later
 
 * disable cpu boost when plugged in
 go to eshell, run
