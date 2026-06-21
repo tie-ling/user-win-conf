@@ -153,12 +153,14 @@ gpg4win
 hledger
 innounp
 lessmsi
+miktex
 nomacs
 notepadplusplus
 obs-studio
 omnissa-horizon-client-np
 opentabletdriver
 openvpn
+polyml
 rufus
 sumatrapdf
 ungoogled-chromium
