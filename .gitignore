@@ -1,3 +1,4 @@
+*/desktop.ini
 *cache
 *~
 .config/scoop/config.json
@@ -10,24 +11,20 @@ AppData/Roaming/.emacs.d
 AppData/Roaming/Adobe
 AppData/Roaming/Gpg4win/kleopatrarc
 AppData/Roaming/Microsoft
+AppData/Roaming/Mozilla
+AppData/Roaming/Thunderbird
 AppData/Roaming/Verein zur Förderung eines Deutschen Forschungsnetzes
-AppData/Roaming/ghc/ghci_history
 AppData/Roaming/gnupg
-AppData/Roaming/FancyWM/themes
+AppData/Roaming/pdfcpu
 Application Data
-Cookies
 Desktop
 Documents
 Downloads
 Favorites
-Contacts
-Links
-Music
-Saved Games
-*/desktop.ini
 IntelGraphicsProfiles
 Local Settings
 My Documents
+NTUSER*
 NetHood
 OneDrive
 OpenVPN
@@ -41,18 +38,20 @@ Start Menu
 Templates
 Videos
 cache
-NTUSER*
+iCloudDrive
 ntuser*
 scoop/apps
 scoop/buckets
 scoop/cache
-scoop/persist/dnscrypt-proxy
+scoop/persist/miktex
 scoop/persist/notepadplusplus
+scoop/persist/obs-studio
+scoop/persist/opentabletdriver/userdata/Cache
+scoop/persist/opentabletdriver/userdata/Logs
+scoop/persist/opentabletdriver/userdata/Plugins
+scoop/persist/rufus
+scoop/persist/thunderbird-esr
 scoop/persist/ungoogled-chromium
 scoop/persist/vlc/portable
-scoop/persist/rufus
-scoop/persist/pwsh
 scoop/persist/winscp
-scoop/persist/opentabletdriver
-scoop/persist/miktex
 scoop/shims
