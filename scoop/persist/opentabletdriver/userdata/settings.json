@@ -4,17 +4,8 @@
     {
       "Tablet": "Gaomon M10K Pro",
       "OutputMode": {
-        "Path": "VoiDPlugins.OutputMode.WinInkAbsoluteMode",
-        "Settings": [
-          {
-            "Property": "Sync",
-            "Value": null
-          },
-          {
-            "Property": "ForcedSync",
-            "Value": null
-          }
-        ],
+        "Path": "VoiDPlugins.OutputMode.VMultiAbsoluteMode",
+        "Settings": [],
         "Enable": true
       },
       "Filters": [],
