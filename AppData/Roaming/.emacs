@@ -34,8 +34,8 @@
   (electric-pair-mode t)
   (enable-local-variables :safe)
   (face-font-family-alternatives
-   '(("JuliaMono" "Noto Sans Mono CJK SC")
-     ("Libertinus Serif" "SimSun")))
+   '(("Consolas" "Microsoft Yahei")
+     ("Aptos" "Microsoft Yahei")))
   (indent-tabs-mode nil)
   (inhibit-startup-screen t)
   (menu-bar-mode t)
@@ -141,10 +141,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-block ((t (:family "JuliaMono" :height 110))))
- '(default ((t (:family "JuliaMono" :height 110))))
- '(variable-pitch ((t (:family "Libertinus Serif" :height 140)))))
+ '(org-block ((t (:family "Consolas"))))
+ '(default ((t (:family "Consolas"))))
+ '(variable-pitch ((t (:family "Aptos")))))
 
 (use-package tex-mode
   :custom
   (latex-run-command "C:/Users/User/scoop/apps/miktex/current/texmfs/install/miktex/bin/x64/miktex-lualatex.exe"))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages nil))
