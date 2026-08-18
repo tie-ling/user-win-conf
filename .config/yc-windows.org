@@ -4,7 +4,7 @@ no compression, just copy, volume size 2048m
 
 7zz a -t7z -m0=Copy -v2048m office.7z O365ProPlusRetail.img
 
-* copy drivers, office, font, .ssh dir and registry settings to windows install disk
+* copy drivers, office, .ssh dir and registry settings to windows install disk
 
 * Boot to BIOS and erase disk
 
@@ -18,17 +18,10 @@ no compression, just copy, volume size 2048m
 
 * copy .ssh dir to $HOME/
 
-* Windows Defender
-disable smart app control
-
-Taskbar. Windows Defender. Apps & Browser Control.  Smart App Control
-settings
-
 * import all my registry settings and reboot
 import reg file from install disc
  
 * on another computer Download drivers from official website
-do not use snappy driver installer
 fujitsu install u9311 (without m) driver
 
 * Install drivers
@@ -101,16 +94,6 @@ right click bitlocker key, use kleopatra to encrypt
 
 save bitlocker key to password repo
 
-* launch emacs (not client)
-in order to install packages for the first time
-
-* Install fonts
-https://stackoverflow.com/questions/13279014/emacs-bad-font-rendering-under-windows
-MUST USE TTF fonts: OTF fonts are badly rendered under windows
-otf渲染效果不好。
-
-Libertinus, , noto cjk mono, noto cjk serif
-
 * install office
 
 
@@ -144,7 +127,7 @@ pwsh: (scoop export | ConvertFrom-Json).apps.name
 adb
 dark
 easyroam-np
-emacs
+ffmpeg
 gcc
 git
 gopass
@@ -157,15 +140,17 @@ miktex
 nomacs
 notepadplusplus
 obs-studio
-omnissa-horizon-client-np
 opentabletdriver
 openvpn
+pdfcpu
 polyml
 rufus
 sumatrapdf
+thunderbird-esr
 ungoogled-chromium
 vlc
 xournalpp
+
 
 * opentabletdriver
 inside opentabletdriver, download and enable windows ink plugin

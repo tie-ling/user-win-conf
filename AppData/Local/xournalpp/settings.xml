@@ -6,16 +6,16 @@
   <property name="pressureMultiplier" value="1"/>
   <property name="zoomGesturesEnabled" value="false"/>
   <property name="selectedToolbar" value="Minimal Left Copy"/>
-  <property name="lastSavePath" value="C:\Users\User\Documents\zughaibi"/>
-  <property name="lastOpenPath" value=""/>
+  <property name="lastSavePath" value="C:\Users\User\Downloads\klausur\met"/>
+  <property name="lastOpenPath" value="C:\Users\User\Downloads\klausur\met"/>
   <property name="lastImagePath" value="C:\Users\User\Downloads"/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="-1"/>
-  <property name="mainWndWidth" value="638"/>
-  <property name="mainWndHeight" value="685"/>
+  <property name="mainWndWidth" value="958"/>
+  <property name="mainWndHeight" value="1045"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="false"/>
@@ -151,7 +151,7 @@
   <property name="latexSettings.externalEditorAutoConfirm" value="false"/>
   <property name="latexSettings.externalEditorCmd" value=""/>
   <property name="latexSettings.temporaryFileExt" value="tex"/>
-  <property name="font" font="Sans" size="12"/>
+  <property name="font" font="Times New Roman," size="12"/>
   <data name="buttonConfig">
     <data name="default">
       <attribute name="color" type="hex" value="ff000000"/>
@@ -209,7 +209,7 @@
     </data>
   </data>
   <data name="tools">
-    <attribute name="current" type="string" value="pen"/>
+    <attribute name="current" type="string" value="text"/>
     <data name="drawArrow"/>
     <data name="drawCoordinateSystem"/>
     <data name="drawDoubleArrow"/>
