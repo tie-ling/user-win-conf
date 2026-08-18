@@ -125,53 +125,21 @@ run powershell command
 pwsh: (scoop export | ConvertFrom-Json).apps.name
 7zip
 adb
-dark
-easyroam-np
-ffmpeg
-gcc
 git
 gopass
 gopass-jsonapi
 gpg4win
 hledger
-innounp
-lessmsi
-miktex
 nomacs
 notepadplusplus
-obs-studio
-opentabletdriver
-openvpn
 pdfcpu
-polyml
 rufus
 sumatrapdf
 thunderbird-esr
 ungoogled-chromium
 vlc
-xournalpp
 
 
-* opentabletdriver
-inside opentabletdriver, download and enable windows ink plugin
-https://github.com/X9VoiD/VoiDPlugins/wiki/WindowsInk
-
-download and install
-https://github.com/X9VoiD/vmulti-bin/releases/
-
-Download the latest release here.
-Extract the archive.
-Run install_hiddriver.bat as administrator.
-
-* autostart
-opentabletdriver
-cp 'C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps\OpenTabletDriver.lnk' 'C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\OpenTabletDriver.lnk'
-
-fancywm
-cp 'C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps\FancyWM.lnk' 'C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\'
-
-autohotkey script for fancywm
-create shortcut at $home/.config, then copy shortcut to shell:startup
 
 * install icloud for the online drive that i paid for
 
