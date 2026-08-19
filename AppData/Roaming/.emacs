@@ -4,7 +4,16 @@
 
 (use-package emacs
   :config
+  ;; UTF-8 as default encoding
+  (set-language-environment 'utf-8)
   (set-default-coding-systems 'utf-8)
+  (set-keyboard-coding-system 'utf-8-unix)
+
+  ;; add this especially on Windows, else python output problem
+  (set-terminal-coding-system 'utf-8-unix)
+
+  (set-fontset-font "fontset-default" 'han "Microsoft Yahei")
+
 
   (defun set-input-method-chinese ()
     (interactive)
