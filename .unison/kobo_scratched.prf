@@ -1,0 +1,6 @@
+# Unison preferences
+root = C:\Users\User\Documents\mybook
+root = D:\mybook
+
+ignore = Name {.sdr}
+ignore = Name {,.}*{.sdr}

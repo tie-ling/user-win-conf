@@ -125,6 +125,7 @@ run powershell command
 pwsh: (scoop export | ConvertFrom-Json).apps.name
 7zip
 adb
+emacs
 git
 gopass
 gopass-jsonapi
@@ -137,6 +138,7 @@ rufus
 sumatrapdf
 thunderbird-esr
 ungoogled-chromium
+unison
 vlc
 
 

@@ -1,10 +1,13 @@
 */desktop.ini
 *cache
 *~
+.android
 .config/scoop/config.json
+.config/git/gitk
 .dbus-keyrings
 .lesshst
 .ssh/known_hosts
+.unison
 AppData/Local
 AppData/LocalLow
 AppData/Roaming/.emacs.d
@@ -49,10 +52,10 @@ scoop/persist/obs-studio
 scoop/persist/opentabletdriver/userdata/Cache
 scoop/persist/opentabletdriver/userdata/Logs
 scoop/persist/opentabletdriver/userdata/Plugins
+scoop/persist/openvpn
 scoop/persist/rufus
 scoop/persist/thunderbird-esr
 scoop/persist/ungoogled-chromium
 scoop/persist/vlc/portable
 scoop/persist/winscp
-scoop/persist/openvpn
 scoop/shims
