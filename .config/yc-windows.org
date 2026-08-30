@@ -82,9 +82,13 @@ install chrome web store
 go to github, search for ublock origin
 
 install ublock origin, disable remote fonts
-install noscript
 install gopassbridge
 install enhanced h264
+
+chrome://settings/security
+
+enable encrypted dns
+disable v8 engine optimisations
 
 * import private gpg key
 launch kleopatra, import .config/yc-private-key.asc
@@ -144,10 +148,6 @@ vlc
 
 
 * install icloud for the online drive that i paid for
-
-* claws-mail
-use gyuchen86@icloud.com for auto configuration.
-but change to guo@wanderian.com later
 
 * disable cpu boost when plugged in
 go to eshell, run
