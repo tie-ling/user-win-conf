@@ -2,8 +2,8 @@
 *cache
 *~
 .android
-.config/scoop/config.json
 .config/git/gitk
+.config/scoop/config.json
 .dbus-keyrings
 .lesshst
 .ssh/known_hosts
@@ -20,6 +20,7 @@ AppData/Roaming/Verein zur Förderung eines Deutschen Forschungsnetzes
 AppData/Roaming/gnupg
 AppData/Roaming/pdfcpu
 Application Data
+Cookies
 Desktop
 Documents
 Downloads
