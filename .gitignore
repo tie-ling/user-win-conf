@@ -9,9 +9,11 @@
 .ssh/known_hosts
 .unison
 AppData/Local
+AppData/Local/gopass/gopass/reminder/env
 AppData/LocalLow
 AppData/Roaming/.emacs.d
 AppData/Roaming/Adobe
+AppData/Roaming/Canon
 AppData/Roaming/Gpg4win/kleopatrarc
 AppData/Roaming/Microsoft
 AppData/Roaming/Mozilla
