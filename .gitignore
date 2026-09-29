@@ -49,6 +49,7 @@ ntuser*
 scoop/apps
 scoop/buckets
 scoop/cache
+scoop/persist/irfanview
 scoop/persist/miktex
 scoop/persist/notepadplusplus
 scoop/persist/obs-studio
@@ -59,7 +60,7 @@ scoop/persist/openvpn
 scoop/persist/rufus
 scoop/persist/thunderbird-esr
 scoop/persist/ungoogled-chromium
+scoop/persist/uv
 scoop/persist/vlc/portable
 scoop/persist/winscp
-scoop/persist/uv
 scoop/shims
