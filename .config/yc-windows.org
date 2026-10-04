@@ -1,4 +1,4 @@
-
+]
 * 7z split archive
 no compression, just copy, volume size 2048m
 
@@ -127,6 +127,7 @@ activepresentation.DefaultLanguageID = msoLanguageIDGerman
 * scoop backup
 run powershell command
 pwsh: (scoop export | ConvertFrom-Json).apps.name
+
 7zip
 adb
 emacs
@@ -135,19 +136,26 @@ gopass
 gopass-jsonapi
 gpg4win
 hledger
-nomacs
+irfanview
+mtpcopy
+mupdf
 notepadplusplus
 pdfcpu
 rufus
+scantailor-advanced
 sumatrapdf
 thunderbird-esr
 ungoogled-chromium
 unison
 vlc
+winscp
+xournalpp
 
+* install huion k58/w58 driver
 
-
-* install icloud for the online drive that i paid for
+* fix vlc
+run
+C:\Users\User\scoop\apps\vlc\current\vlc-cache-gen.exe C:\Users\User\scoop\apps\vlc\current\plugins\
 
 * disable cpu boost when plugged in
 go to eshell, run

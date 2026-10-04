@@ -6,16 +6,16 @@
   <property name="pressureMultiplier" value="1"/>
   <property name="zoomGesturesEnabled" value="false"/>
   <property name="selectedToolbar" value="Minimal Left Copy"/>
-  <property name="lastSavePath" value="C:\Users\User\Downloads\klausur\met"/>
-  <property name="lastOpenPath" value="C:\Users\User\Downloads\klausur\met"/>
-  <property name="lastImagePath" value="C:\Users\User\Downloads"/>
+  <property name="lastSavePath" value=""/>
+  <property name="lastOpenPath" value="C:\Users\User\Downloads\cambridge"/>
+  <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="-1"/>
-  <property name="mainWndWidth" value="958"/>
-  <property name="mainWndHeight" value="1045"/>
+  <property name="mainWndWidth" value="959"/>
+  <property name="mainWndHeight" value="1006"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="false"/>
@@ -26,7 +26,7 @@
   <property name="menubarVisible" value="true"/>
   <property name="filepathShownInTitlebar" value="false"/>
   <property name="pageNumberShownInTitlebar" value="false"/>
-  <property name="numColumns" value="1"/>
+  <property name="numColumns" value="2"/>
   <property name="numRows" value="1"/>
   <property name="viewFixedRows" value="false"/>
   <property name="showPairedPages" value="false"/>
@@ -40,7 +40,7 @@
   <!--Which GUI elements are shown in default view mode, separated by a colon (,)-->
   <property name="defaultViewModeAttributes" value="showMenubar,showToolbar"/>
   <!--Which GUI elements are shown in fullscreen view mode, separated by a colon (,)-->
-  <property name="fullscreenViewModeAttributes" value="goFullscren,showToolbar,showSidebar"/>
+  <property name="fullscreenViewModeAttributes" value="goFullscren,showMenubar,showToolbar"/>
   <!--Which GUI elements are shown in presentation view mode, separated by a colon (,)-->
   <property name="presentationViewModeAttributes" value="goFullscren,showToolbar"/>
   <!--The cursor icon used with a stylus, allowed values are "none", "dot", "big", "arrow"-->
@@ -48,17 +48,17 @@
   <!--The eraser cursor visibility used with a stylus, allowed values are "never", "always", "hover", "touch"-->
   <property name="eraserVisibility" value="always"/>
   <!--The icon theme, allowed values are "iconsColor", "iconsLucide"-->
-  <property name="iconTheme" value="iconsColor"/>
+  <property name="iconTheme" value="iconsLucide"/>
   <!--Dark/light mode, allowed values are "useSystem", "forceLight", "forceDark"-->
   <property name="themeVariant" value="useSystem"/>
-  <property name="highlightPosition" value="false"/>
+  <property name="highlightPosition" value="true"/>
   <property name="cursorHighlightColor" value="2164260608"/>
   <property name="cursorHighlightBorderColor" value="2147483903"/>
   <property name="cursorHighlightRadius" value="30"/>
   <property name="cursorHighlightBorderWidth" value="0"/>
-  <property name="useStockIcons" value="false"/>
-  <property name="disableScrollbarFadeout" value="false"/>
-  <property name="disableAudio" value="false"/>
+  <property name="useStockIcons" value="true"/>
+  <property name="disableScrollbarFadeout" value="true"/>
+  <property name="disableAudio" value="true"/>
   <!--Hides scroolbars in the main window, allowed values: "none", "horizontal", "vertical", "both"-->
   <property name="scrollbarHideType" value="none"/>
   <property name="autoloadMostRecent" value="false"/>
@@ -78,7 +78,7 @@
   <property name="drawDirModsRadius" value="50"/>
   <property name="snapRotation" value="true"/>
   <property name="snapRotationTolerance" value="0.3"/>
-  <property name="snapGrid" value="false"/>
+  <property name="snapGrid" value="true"/>
   <property name="snapGridTolerance" value="0.5"/>
   <property name="snapGridSize" value="14.17"/>
   <property name="strokeRecognizerMinSize" value="40"/>
@@ -101,14 +101,14 @@
   <property name="preloadPagesAfter" value="5"/>
   <property name="eagerPageCleanup" value="true"/>
   <!--Config for new pages-->
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=false&#10;size=595.275591x841.889764&#10;backgroundType=dotted&#10;backgroundColor=#ffffff&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=true&#10;size=419.527559x595.275591&#10;backgroundType=dotted&#10;backgroundColor=#ffffff&#10;"/>
   <property name="sizeUnit" value="cm"/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
   <property name="audioOutputDevice" value="-1"/>
-  <property name="audioSampleRate" value="44100"/>
+  <property name="audioSampleRate" value="16000"/>
   <property name="audioGain" value="1"/>
-  <property name="defaultSeekTime" value="5"/>
+  <property name="defaultSeekTime" value="1"/>
   <property name="pluginEnabled" value=""/>
   <property name="pluginDisabled" value=""/>
   <property name="strokeFilterIgnoreTime" value="150"/>
@@ -119,9 +119,9 @@
   <property name="trySelectOnStrokeFiltered" value="false"/>
   <property name="snapRecognizedShapesEnabled" value="false"/>
   <property name="restoreLineWidthEnabled" value="false"/>
-  <property name="numIgnoredStylusEvents" value="6"/>
-  <property name="inputSystemTPCButton" value="false"/>
-  <property name="inputSystemDrawOutsideWindow" value="false"/>
+  <property name="numIgnoredStylusEvents" value="0"/>
+  <property name="inputSystemTPCButton" value="true"/>
+  <property name="inputSystemDrawOutsideWindow" value="true"/>
   <property name="preferredLocale" value=""/>
   <property name="useSpacesForTab" value="false"/>
   <property name="numberOfSpacesForTab" value="4"/>
@@ -151,17 +151,17 @@
   <property name="latexSettings.externalEditorAutoConfirm" value="false"/>
   <property name="latexSettings.externalEditorCmd" value=""/>
   <property name="latexSettings.temporaryFileExt" value="tex"/>
-  <property name="font" font="Times New Roman," size="12"/>
+  <property name="font" font="Consolas" size="12"/>
   <data name="buttonConfig">
     <data name="default">
       <attribute name="color" type="hex" value="ff000000"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="size" type="string" value="thin"/>
-      <attribute name="strokeType" type="string" value="standard"/>
+      <attribute name="strokeType" type="string" value="none"/>
       <attribute name="tool" type="string" value="pen"/>
     </data>
     <data name="eraser">
-      <attribute name="eraserMode" type="string" value="deleteStroke"/>
+      <attribute name="eraserMode" type="string" value="none"/>
       <attribute name="size" type="string" value="none"/>
       <attribute name="tool" type="string" value="eraser"/>
     </data>
@@ -191,7 +191,23 @@
       <attribute name="deviceClass" type="int" value="0"/>
       <attribute name="deviceSource" type="int" value="0"/>
     </data>
+    <data name="256c 006e Pen stylus">
+      <attribute name="deviceClass" type="int" value="2"/>
+      <attribute name="deviceSource" type="int" value="1"/>
+    </data>
+    <data name="256c PenTablet Eraser">
+      <attribute name="deviceClass" type="int" value="3"/>
+      <attribute name="deviceSource" type="int" value="2"/>
+    </data>
     <data name="256c PenTablet Pen stylus">
+      <attribute name="deviceClass" type="int" value="2"/>
+      <attribute name="deviceSource" type="int" value="1"/>
+    </data>
+    <data name="DJP Inc. Virtual Multitouch Device Eraser">
+      <attribute name="deviceClass" type="int" value="3"/>
+      <attribute name="deviceSource" type="int" value="2"/>
+    </data>
+    <data name="DJP Inc. Virtual Multitouch Device Pen stylus">
       <attribute name="deviceClass" type="int" value="2"/>
       <attribute name="deviceSource" type="int" value="1"/>
     </data>
@@ -199,17 +215,9 @@
       <attribute name="deviceClass" type="int" value="1"/>
       <attribute name="deviceSource" type="int" value="0"/>
     </data>
-    <data name="hanvonugee ugee device Eraser">
-      <attribute name="deviceClass" type="int" value="3"/>
-      <attribute name="deviceSource" type="int" value="2"/>
-    </data>
-    <data name="hanvonugee ugee device Pen stylus">
-      <attribute name="deviceClass" type="int" value="2"/>
-      <attribute name="deviceSource" type="int" value="1"/>
-    </data>
   </data>
   <data name="tools">
-    <attribute name="current" type="string" value="text"/>
+    <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow"/>
     <data name="drawCoordinateSystem"/>
     <data name="drawDoubleArrow"/>
@@ -217,12 +225,12 @@
     <data name="drawRect"/>
     <data name="drawSpline"/>
     <data name="eraser">
-      <attribute name="size" type="string" value="VERY_FINE"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
       <attribute name="type" type="string" value="deleteStroke"/>
     </data>
     <data name="hand"/>
     <data name="highlighter">
-      <attribute name="color" type="hex" value="ff000000"/>
+      <attribute name="color" type="hex" value="ffffff00"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
