@@ -1,4 +1,9 @@
-]
+
+* BACKUP Thunderbird PROFILE!!!
+Save myself the time to setup email, calendar, contacts, etc.
+
+Open Thunderbird, Go to Hamburger Menu, then Tools, then Export
+
 * 7z split archive
 no compression, just copy, volume size 2048m
 
