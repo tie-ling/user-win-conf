@@ -2,19 +2,17 @@
 
 (global-unset-key (kbd "C-z"))
 
+;; UTF-8 as default encoding
+(set-language-environment 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-keyboard-coding-system 'utf-8-unix)
+
+;; add this especially on Windows, else python output problem
+(set-terminal-coding-system 'utf-8-unix)
+(set-fontset-font "fontset-default" 'han "Microsoft Yahei")
+
 (use-package emacs
   :config
-  ;; UTF-8 as default encoding
-  (set-language-environment 'utf-8)
-  (set-default-coding-systems 'utf-8)
-  (set-keyboard-coding-system 'utf-8-unix)
-
-  ;; add this especially on Windows, else python output problem
-  (set-terminal-coding-system 'utf-8-unix)
-
-  (set-fontset-font "fontset-default" 'han "Microsoft Yahei")
-
-
   (defun set-input-method-chinese ()
     (interactive)
     (set-input-method "pyim"))
@@ -29,14 +27,12 @@
   (("C-c i c" . set-input-method-chinese)
    ("C-c i g" . set-input-method-german)
    ("C-c i t" . set-input-method-TeX)
-   ("M-o" . other-window)
-   ("C-c v" . visual-line-mode))
+   ("M-o" . other-window))
 
   :custom
   (auto-fill-function 'do-auto-fill t)
   (calendar-week-start-day 1)
   (completion-ignore-case t)
-  (custom-enabled-themes '(modus-operandi) nil nil)
   (default-input-method "german")
   (display-battery-mode t)
   (display-time-mode t)
@@ -48,12 +44,6 @@
   (indent-tabs-mode nil)
   (inhibit-startup-screen t)
   (menu-bar-mode t)
-  (message-default-mail-headers nil)
-  (message-sendmail-envelope-from 'header)
-  (modus-themes-bold-constructs nil)
-  (modus-themes-inhibit-reload nil)
-  (modus-themes-italic-constructs t)
-  (modus-themes-mixed-fonts t)
   (network-security-level 'paranoid)
   (ring-bell-function 'ignore)
   (read-buffer-completion-ignore-case t)
@@ -61,16 +51,7 @@
   (require-final-newline t)
   (scroll-bar-mode t)
   (tab-always-indent 'complete)
-  (tool-bar-mode nil)
-  (treesit-language-source-alist '((sml "https://github.com/MatthewFluet/tree-sitter-sml" "v0.22.0" nil "gcc" "cpp")))
-  (user-mail-address "yc@apvc.uk"))
-
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
-
-(use-package sml-ts-mode
-  :ensure t)
+  (tool-bar-mode nil))
 
 (use-package pyim
   :ensure t)
@@ -86,22 +67,9 @@
   (shr-inhibit-images t)
   (shr-use-colors nil))
 
-(use-package visual-fill
-  :ensure t
-  :hook
-  ((visual-line-mode . (lambda () (visual-fill-mode 'toggle)))
-   (visual-line-mode . (lambda () (adaptive-wrap-prefix-mode 'toggle)))))
-
-(use-package adaptive-wrap
-  :ensure t)
-
 (use-package text-mode
   :hook
   ((text-mode . variable-pitch-mode)))
-
-(use-package savehist
-  :init
-  (savehist-mode))
 
 (use-package vertico
   :ensure t
@@ -123,12 +91,9 @@
   :config
   (set-face-attribute 'org-block nil :inherit 'fixed-pitch)
   :bind
-  (("C-c a" . org-agenda)
-   ("C-c t" . org-timer-set-timer))
+  (("C-c a" . org-agenda))
   :custom
-  (org-clock-sound "C:/Windows/Media/Alarm01.wav")
   (org-agenda-custom-commands '(("o" "Overdue TODOs" tags-todo "+TIMESTAMP<\"<today>\"")))
-  (org-timer-default-timer 20)
   (org-agenda-inhibit-startup t)
   (org-agenda-window-setup 'current-window)
   (org-agenda-start-with-log-mode nil)
@@ -153,13 +118,3 @@
  '(default ((t (:family "Consolas"))))
  '(org-block ((t (:family "Consolas"))))
  '(variable-pitch ((t (:family "Aptos")))))
-
-(use-package tex-mode
-  :custom
-  (latex-run-command "C:/Users/User/scoop/apps/miktex/current/texmfs/install/miktex/bin/x64/miktex-lualatex.exe"))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
