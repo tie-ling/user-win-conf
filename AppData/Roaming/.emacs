@@ -30,6 +30,8 @@
    ("M-o" . other-window))
 
   :custom
+  ;; for syncing org agenda after git pull
+  (global-auto-revert-mode t)
   (auto-fill-function 'do-auto-fill t)
   (calendar-week-start-day 1)
   (completion-ignore-case t)
