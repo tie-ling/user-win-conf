@@ -117,4 +117,11 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Consolas"))))
  '(org-block ((t (:family "Consolas"))))
+ '(org-verbatim ((t (:family "Consolas"))))
  '(variable-pitch ((t (:family "Aptos")))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

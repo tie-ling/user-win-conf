@@ -78,6 +78,7 @@ mv user-win-conf/.git $HOME/
 git reset --hard
 
 git clone git@github.com:tie-ling/user-projects $HOME/Projects
+git -C $HOME/Projects config pull.rebase true
 
 * install my own scoop bucket
 scoop install $HOME/.config/bucket/
