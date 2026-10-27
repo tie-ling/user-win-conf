@@ -50,6 +50,9 @@
   (ring-bell-function 'ignore)
   (read-buffer-completion-ignore-case t)
   (read-file-name-completion-ignore-case t)
+  (treesit-language-source-alist
+   '((sml "https://github.com/MatthewFluet/tree-sitter-sml" "v0.22.0" nil "gcc" "cpp")
+     (typst "https://github.com/Ziqi-Yang/tree-sitter-typst" nil nil "gcc" "cpp")))
   (require-final-newline t)
   (scroll-bar-mode t)
   (tab-always-indent 'complete)
@@ -77,6 +80,14 @@
   :ensure t
   :custom
   (vertico-mode t))
+
+(use-package typst-ts-mode
+  :custom
+  (typst-ts-watch-options ("--open"))
+  :config
+  (keymap-set typst-ts-mode-map "C-c C-c" #'typst-ts-tmenu)
+  :ensure t)
+
 
 ; compat with hledger https://hledger.org/editors.html
 (use-package ledger-mode
@@ -126,4 +137,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(package-selected-packages
+   '(adaptive-wrap auctex ledger-mode pyim-basedict sml-ts-mode
+                   typst-ts-mode vertico visual-fill)))
