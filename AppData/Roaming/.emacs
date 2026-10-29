@@ -83,7 +83,7 @@
 
 (use-package typst-ts-mode
   :custom
-  (typst-ts-watch-options ("--open"))
+  (typst-ts-watch-options '("--open"))
   :config
   (keymap-set typst-ts-mode-map "C-c C-c" #'typst-ts-tmenu)
   :ensure t)
@@ -117,8 +117,8 @@
      (tags . " %i %-12:c")
      (search . " %i %-12:c")))
   (org-agenda-files
-   "/Users/User/Projects/org/agenda-file-list.txt")
-  (org-directory "/Users/User/Projects/org")
+   "/Users/User/Projects/agenda/agenda-file-list.txt")
+  (org-directory "/Users/User/Projects/agenda")
   (org-agenda-span 'day)
   (org-display-custom-times nil)
   (org-time-stamp-custom-formats '("%m-%d" . "%H:%M")))
