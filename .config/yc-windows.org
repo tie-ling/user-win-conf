@@ -110,6 +110,8 @@ save bitlocker key to password repo
 * activate windows
 massgrave.dev
 
+irm https://get.activated.win | iex
+
 * activate office with kms not Ohook
 
 * limit battery charge to 80%
