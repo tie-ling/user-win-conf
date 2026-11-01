@@ -138,6 +138,7 @@ pwsh: (scoop export | ConvertFrom-Json).apps.name
 
 7zip
 adb
+diffutils
 emacs
 gcc
 git
