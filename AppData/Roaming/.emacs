@@ -52,7 +52,9 @@
   (read-file-name-completion-ignore-case t)
   (treesit-language-source-alist
    '((sml "https://github.com/MatthewFluet/tree-sitter-sml" "v0.22.0" nil "gcc" "cpp")
-     (typst "https://github.com/Ziqi-Yang/tree-sitter-typst" nil nil "gcc" "cpp")))
+     (typst "https://github.com/Ziqi-Yang/tree-sitter-typst" nil nil "gcc" "cpp")
+     (nix "https://github.com/nix-community/tree-sitter-nix" "v0.3.0" nil "gcc" "cpp")
+))
   (require-final-newline t)
   (scroll-bar-mode t)
   (tab-always-indent 'complete)
@@ -88,6 +90,11 @@
   (keymap-set typst-ts-mode-map "C-c C-c" #'typst-ts-tmenu)
   :ensure t)
 
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
+(use-package nix-ts-mode
+  :mode ("\\.nix\\'")
+  :ensure t)
 
 ; compat with hledger https://hledger.org/editors.html
 (use-package ledger-mode
@@ -138,5 +145,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(adaptive-wrap auctex ledger-mode pyim-basedict sml-ts-mode
-                   typst-ts-mode vertico visual-fill)))
+   '(adaptive-wrap auctex ledger-mode nix-ts-mode pyim-basedict
+                   sml-ts-mode typst-ts-mode vertico visual-fill)))
