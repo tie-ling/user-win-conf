@@ -13,6 +13,7 @@ AppData/Local/gopass/gopass/reminder/env
 AppData/LocalLow
 AppData/Roaming/.emacs.d
 AppData/Roaming/Adobe
+AppData/Roaming/Audacity/
 AppData/Roaming/Canon
 AppData/Roaming/Gpg4win
 AppData/Roaming/Microsoft
@@ -49,8 +50,10 @@ ntuser*
 scoop/apps
 scoop/buckets
 scoop/cache
+scoop/persist/audacity/
 scoop/persist/irfanview
 scoop/persist/miktex
+scoop/persist/mpc-be
 scoop/persist/notepadplusplus
 scoop/persist/obs-studio
 scoop/persist/opentabletdriver/userdata/Cache
@@ -63,5 +66,4 @@ scoop/persist/ungoogled-chromium
 scoop/persist/uv
 scoop/persist/vlc/portable
 scoop/persist/winscp
-scoop/persist/mpc-be
 scoop/shims
