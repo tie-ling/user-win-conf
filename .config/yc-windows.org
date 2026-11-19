@@ -284,3 +284,33 @@ processor performance boost mode: disabled
 
 go to windows settings, (win+I), go to system, power and battery.  enable battery saver
 at all times, for both plugged in and on battery
+
+* Fix slow PowerShell Start up after DotNet update
+When PowerShell starts to become slow at startup, an update of the
+.NET framework might be the cause. To speed up again, use ngen.exe on
+PowerShell's assemblies. It generate native images for an assembly and
+its dependencies and install them in the Native Images Cache.
+
+Run this as *Administrator*
+
+#+begin_src
+# Source - https://stackoverflow.com/a/59343705
+# Posted by Theo
+# Retrieved 2026-11-19, License - CC BY-SA 4.0
+
+$env:PATH = [Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory()
+[AppDomain]::CurrentDomain.GetAssemblies() | ForEach-Object {
+    $path = $_.Location
+    if ($path) { 
+        $name = Split-Path $path -Leaf
+        Write-Host -ForegroundColor Yellow "`r`nRunning ngen.exe on '$name'"
+        ngen.exe install $path /nologo
+    }
+}
+#+end_src
+
+Use NoProfile to speed-up powershell startup, inside wezterm config:
+#+begin_src
+-- Use -NoProfile to speed up powershell startup
+config.default_prog = { 'powershell', '-NoProfile' }
+#+end_src
