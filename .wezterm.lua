@@ -1,6 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 
+
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
@@ -13,5 +14,13 @@ config.color_scheme = 'Modus-Operandi'
 config.mux_enable_ssh_agent = false
 
 config.default_cursor_style = 'SteadyUnderline'
+
+config.font = wezterm.font_with_fallback {
+  'Consolas',
+  'Microsoft YaHei',
+}
+config.font_size = 10
+config.hide_tab_bar_if_only_one_tab = true
+
 -- Finally, return the configuration to wezterm:
 return config
