@@ -9,7 +9,9 @@ local config = wezterm.config_builder()
 config.default_prog = { 'powershell', '-NoProfile' }
 config.color_scheme = 'Modus-Operandi'
 -- Usage of wezterm ssh with ssh-agent
+-- https://github.com/wezterm/wezterm/discussions/5541
 config.mux_enable_ssh_agent = false
 
+config.default_cursor_style = 'SteadyUnderline'
 -- Finally, return the configuration to wezterm:
 return config
