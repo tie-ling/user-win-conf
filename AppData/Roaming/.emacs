@@ -121,7 +121,7 @@
   ;; For saving words to the personal dictionary, don't infer it from
   ;; the locale, otherwise it would save to ~/.hunspell_de_DE.
   (ispell-personal-dictionary "~/hunspell_personal_dictionary")
-  :init
+  :config
   ;; ispell-set-spellchecker-params has to be called
   ;; before ispell-hunspell-add-multi-dic will work
   (ispell-set-spellchecker-params)
