@@ -12,21 +12,10 @@
 (set-fontset-font "fontset-default" 'han "Microsoft Yahei")
 
 (use-package emacs
-  :config
-  (defun set-input-method-chinese ()
-    (interactive)
-    (set-input-method "pyim"))
-  (defun set-input-method-german ()
-    (interactive)
-    (set-input-method "german"))
-  (defun set-input-method-TeX ()
-    (interactive)
-    (set-input-method "TeX"))
-
   :bind
-  (("C-c i c" . set-input-method-chinese)
-   ("C-c i g" . set-input-method-german)
-   ("C-c i t" . set-input-method-TeX)
+  (("C-c i c" . (lambda () (interactive) (set-input-method "pyim")))
+   ("C-c i g" . (lambda () (interactive) (set-input-method "german")))
+   ("C-c i t" . (lambda () (interactive) (set-input-method "TeX")))
    ("M-o" . other-window))
 
   :custom
@@ -116,12 +105,31 @@
      (todo . " %i %-12:c")
      (tags . " %i %-12:c")
      (search . " %i %-12:c")))
+  (org-directory "/Users/User/Projects/agenda/")
+  ;; Use full agenda file path to speed up loading
   (org-agenda-files
-   "/Users/User/Projects/agenda/agenda-file-list.txt")
-  (org-directory "/Users/User/Projects/agenda")
+   (mapcar #'(lambda (s) (concat org-directory s))
+   '("future.org" "one-off.org" "repeat.org" "uni.org")))
   (org-agenda-span 'day)
   (org-display-custom-times nil)
   (org-time-stamp-custom-formats '("%m-%d" . "%H:%M")))
+
+(use-package ispell
+  :custom
+  (ispell-program-name "hunspell")
+  (ispell-dictionary "de_DE,en_US")
+  ;; For saving words to the personal dictionary, don't infer it from
+  ;; the locale, otherwise it would save to ~/.hunspell_de_DE.
+  (ispell-personal-dictionary "~/hunspell_personal_dictionary")
+  :init
+  ;; ispell-set-spellchecker-params has to be called
+  ;; before ispell-hunspell-add-multi-dic will work
+  (ispell-set-spellchecker-params)
+  (ispell-hunspell-add-multi-dic "de_DE,en_US")
+  ;; The personal dictionary file has to exist, otherwise hunspell will
+  ;; silently not use it.
+  (unless (file-exists-p ispell-personal-dictionary)
+    (write-region "" nil ispell-personal-dictionary nil 0)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
