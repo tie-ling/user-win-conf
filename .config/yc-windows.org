@@ -1,4 +1,3 @@
-
 * BACKUP Thunderbird PROFILE!!!
 Save myself the time to setup email, calendar, contacts, etc.
 
@@ -135,41 +134,117 @@ activepresentation.DefaultLanguageID = msoLanguageIDGerman
 * scoop backup
 run powershell command
 pwsh: (scoop export | ConvertFrom-Json).apps.name
-
 7zip
 adb
-diffutils
-emacs
-gcc
+audacity
 git
 gopass
 gopass-jsonapi
 gpg4win
-hledger
-irfanview
-mpc-be
+msys2
 mtpcopy
-mupdf
-notepadplusplus
+nomacs
 openvpn
 pdfcpu
-qrencode
-rufus
 scantailor-advanced
 sumatrapdf
 thunderbird-esr
-typst
 ungoogled-chromium
 unison
-vlc
 winscp
-xournalpp
+
+* initialize msys2
+add environment variable for msys2
+
+#+begin_src
+C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\User\scoop\apps\gpg4win\current\Gpg4win\..\GnuPG\bin;C:\Users\User\scoop\apps\msys2\current\clang64\bin;C:\Users\User\scoop\shims
+#+end_src
+
+setx path "%path%;C:\Users\User\scoop\apps\msys2\current\clang64\bin;C:\Users\User\scoop\shims"
+
+inside powershell terminal, run msys2 command to initialize it.
+msys2
+
+Update packages: pacman -Syu
+
+* install emacs and friends
+inside powershell terminal, run clang64
+clang64
+
+Info: Generate installed list: pacman -Qqe
+Info: Install packages: pacman -S
+Info: Remove packages with deps: pacmna -Rs [package]
+Info: Check Orphaned packages: pacman -Qdt
+
+mingw-w64-clang-x86_64-7zip
+mingw-w64-clang-x86_64-clang
+mingw-w64-clang-x86_64-diffutils
+mingw-w64-clang-x86_64-emacs
+mingw-w64-clang-x86_64-git
+mingw-w64-clang-x86_64-hunspell
+mingw-w64-clang-x86_64-hunspell-en
+mingw-w64-clang-x86_64-ledger
+mingw-w64-clang-x86_64-mupdf-tools
+mingw-w64-clang-x86_64-notepad++
+mingw-w64-clang-x86_64-qrencode
+mingw-w64-clang-x86_64-typst
+mingw-w64-clang-x86_64-vlc
+mingw-w64-clang-x86_64-wezterm
+mingw-w64-clang-x86_64-xournalpp
+mingw-w64-ucrt-x86_64-rufus
+
+* add shortcut for emacs
+inside powershell terminal, run
+#+begin_src
+  $WshShell = New-Object -COMObject WScript.Shell
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Emacs Client.lnk")
+  $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\bin\emacsclientw.exe"
+  $Shortcut.Arguments = '-c -n -a ""'
+  $Shortcut.WorkingDirectory = "$env:USERPROFILE\Projects"
+  $Shortcut.Save()
+
+  $WshShell = New-Object -COMObject WScript.Shell
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\WezTerm.lnk")
+  $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\bin\wezterm-gui.exe"
+  $Shortcut.Save()
+
+  $WshShell = New-Object -COMObject WScript.Shell
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Notepad++.lnk")
+  $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\lib\notepad++\notepad++.exe"
+  $Shortcut.Save()
+
+  $WshShell = New-Object -COMObject WScript.Shell
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\VLC Media Player.lnk")
+  $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\bin\vlc.exe"
+  $Shortcut.Save()
+
+  $WshShell = New-Object -COMObject WScript.Shell
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Xournal++.lnk")
+  $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\bin\xournalpp-wrapper.exe"
+  $Shortcut.Save()
+
+
+  $WshShell = New-Object -COMObject WScript.Shell
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Rufus.lnk")
+  $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\ucrt64\bin\rufus.exe"
+  $Shortcut.Save()
+
+#+end_src
+
+* pin Start Menu to Quick Access for easier access to the programs
+#+begin_src
+  $o = new-object -com shell.application
+  $o.Namespace("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\").Self.InvokeVerb("pintohome")
+#+end_src
+
+* german dictionary for the hunspell spellchecker
+extract *.aff and *.dic files
+from
+$HOME/.config/hunspell-de.zip
+to
+C:\Users\User\scoop\apps\msys2\current\clang64\share\hunspell
 
 * install huion k58/w58 driver
-
-* fix vlc
-run
-C:\Users\User\scoop\apps\vlc\current\vlc-cache-gen.exe C:\Users\User\scoop\apps\vlc\current\plugins\
 
 * disable cpu boost when plugged in
 go to eshell, run

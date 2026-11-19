@@ -4,5 +4,6 @@
 [core]
 	sshCommand = 'C:\\Windows\\System32\\OpenSSH\\ssh.exe'
 	editor = emacsclientw
+	autocrlf = true
 [gui]
 	fontdiff = -family Consolas -size 12 -weight normal -slant roman -underline 0 -overstrike 0

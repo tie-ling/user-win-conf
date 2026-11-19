@@ -4,7 +4,7 @@
 
 ;; UTF-8 as default encoding
 (set-language-environment 'utf-8)
-(set-default-coding-systems 'utf-8)
+(set-default-coding-systems 'utf-8-unix)
 (set-keyboard-coding-system 'utf-8-unix)
 
 ;; add this especially on Windows, else python output problem
@@ -51,9 +51,9 @@
   (read-buffer-completion-ignore-case t)
   (read-file-name-completion-ignore-case t)
   (treesit-language-source-alist
-   '((sml "https://github.com/MatthewFluet/tree-sitter-sml" "v0.22.0" nil "gcc" "cpp")
-     (typst "https://github.com/Ziqi-Yang/tree-sitter-typst" nil nil "gcc" "cpp")
-     (nix "https://github.com/nix-community/tree-sitter-nix" "v0.3.0" nil "gcc" "cpp")
+   '((sml "https://github.com/MatthewFluet/tree-sitter-sml" "v0.22.0" nil nil "cpp")
+     (typst "https://github.com/Ziqi-Yang/tree-sitter-typst" nil nil nil "cpp")
+     (nix "https://github.com/nix-community/tree-sitter-nix" "v0.3.0" nil nil "cpp")
 ))
   (require-final-newline t)
   (scroll-bar-mode t)
@@ -96,15 +96,8 @@
   :mode ("\\.nix\\'")
   :ensure t)
 
-; compat with hledger https://hledger.org/editors.html
 (use-package ledger-mode
   :ensure t
-  :custom
-  ((ledger-binary-path "hledger")
-   (ledger-mode-should-check-version nil)
-   (ledger-report-auto-width nil)
-   (ledger-report-links-in-register nil)
-   (ledger-report-native-highlighting-arguments '("--color=always")))
   :mode ("\\.hledger\\'" "\\.ledger\\'"))
 
 (use-package org

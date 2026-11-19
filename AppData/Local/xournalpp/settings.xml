@@ -16,7 +16,7 @@
   <property name="displayDpi" value="-1"/>
   <property name="mainWndWidth" value="958"/>
   <property name="mainWndHeight" value="1005"/>
-  <property name="maximized" value="false"/>
+  <property name="maximized" value="true"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="false"/>
   <property name="sidebarWidth" value="50"/>
