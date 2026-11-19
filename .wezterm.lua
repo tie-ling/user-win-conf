@@ -8,6 +8,8 @@ local config = wezterm.config_builder()
 -- Use -NoProfile to speed up powershell startup
 config.default_prog = { 'powershell', '-NoProfile' }
 config.color_scheme = 'Modus-Operandi'
+-- Usage of wezterm ssh with ssh-agent
+config.mux_enable_ssh_agent = false
 
 -- Finally, return the configuration to wezterm:
 return config
