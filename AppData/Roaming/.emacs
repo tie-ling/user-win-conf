@@ -127,6 +127,16 @@
   (unless (file-exists-p ispell-personal-dictionary)
     (write-region "" nil ispell-personal-dictionary nil 0)))
 
+(use-package dired
+  :bind (:map dired-mode-map ("\\" . yc/dired-open-files))
+  :config
+  (defun yc/dired-open-single-file (s)
+    ; use '(16) to force org-open-file to use system program
+    (org-open-file s '(16)))
+  (defun yc/dired-open-files ()
+    (interactive)
+    (mapcar #'yc/dired-open-single-file (dired-get-marked-files))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
