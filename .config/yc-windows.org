@@ -177,9 +177,14 @@ Info: Remove packages with deps: pacmna -Rs [package]
 Info: Check Orphaned packages: pacman -Qdt
 
 mingw-w64-clang-x86_64-7zip
+
+# treesitter support
 mingw-w64-clang-x86_64-clang
 mingw-w64-clang-x86_64-diffutils
+# emacs docview, with djvu, ghostscript and mutools
+mingw-w64-clang-x86_64-djvulibre
 mingw-w64-clang-x86_64-emacs
+mingw-w64-clang-x86_64-ghostscript
 mingw-w64-clang-x86_64-git
 mingw-w64-clang-x86_64-hunspell
 mingw-w64-clang-x86_64-hunspell-en
