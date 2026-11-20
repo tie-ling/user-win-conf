@@ -63,10 +63,6 @@
   (shr-inhibit-images t)
   (shr-use-colors nil))
 
-(use-package text-mode
-  :hook
-  ((text-mode . variable-pitch-mode)))
-
 (use-package vertico
   :ensure t
   :custom
@@ -108,7 +104,7 @@
   (org-directory "/Users/User/Projects/agenda/")
   ;; Use full agenda file path to speed up loading
   (org-agenda-files
-   (mapcar #'(lambda (s) (concat org-directory s))
+   (mapcar #'(lambda (s) (concat "/Users/User/Projects/agenda/" s))
    '("future.org" "one-off.org" "repeat.org" "uni.org")))
   (org-agenda-span 'day)
   (org-display-custom-times nil)
@@ -140,11 +136,3 @@
  '(org-block ((t (:family "Consolas"))))
  '(org-verbatim ((t (:family "Consolas"))))
  '(variable-pitch ((t (:family "Aptos")))))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(adaptive-wrap auctex ledger-mode nix-ts-mode pyim-basedict
-                   sml-ts-mode typst-ts-mode vertico visual-fill)))
