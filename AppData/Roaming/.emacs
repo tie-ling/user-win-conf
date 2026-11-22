@@ -9,7 +9,12 @@
 
 ;; add this especially on Windows, else python output problem
 (set-terminal-coding-system 'utf-8-unix)
-(set-fontset-font "fontset-default" 'han "Microsoft Yahei")
+
+;; to fix HELLO file slow-down: set all fontsets to consolas
+(set-fontset-font "fontset-default" '(#x00000 . #xfffff) "Consolas")
+;; then set han to yahei and emoji
+(set-fontset-font "fontset-default" 'han "Microsoft Yahei UI")
+(set-fontset-font "fontset-default" 'emoji "Segoe UI Emoji")
 
 (use-package emacs
   :bind
@@ -29,9 +34,6 @@
   (display-time-mode t)
   (electric-pair-mode t)
   (enable-local-variables :safe)
-  (face-font-family-alternatives
-   '(("Consolas" "Microsoft Yahei")
-     ("Aptos" "Microsoft Yahei")))
   (indent-tabs-mode nil)
   (inhibit-startup-screen t)
   (menu-bar-mode t)
@@ -142,7 +144,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas"))))
- '(org-block ((t (:family "Consolas"))))
- '(org-verbatim ((t (:family "Consolas"))))
- '(variable-pitch ((t (:family "Aptos")))))
+ '(default ((t (:family "Consolas")))))
