@@ -1,37 +1,53 @@
-*/desktop.ini
-*cache
 *~
 .android
-.config/scoop
 .config/mupdf
+.config/scoop
 .dbus-keyrings
 .lesshst
 .local
 .ssh/known_hosts
-.unison
-AppData
+.unison/*.log
+.unison/ar*
+.unison/fp*
+3D Objects
+AppData/Local
+AppData/LocalLow
+AppData/Roaming/.emacs.d
+AppData/Roaming/HP
+AppData/Roaming/Microsoft
+AppData/Roaming/Thunderbird
+AppData/Roaming/Verein zur Förderung eines Deutschen Forschungsnetzes
+AppData/Roaming/vlc
+AppData/Roaming/gnupg
 Application Data
+Contacts
 Cookies
 Desktop
 Documents
 Downloads
 Favorites
-IntelGraphicsProfiles
 Local Settings
+Music
 My Documents
-NTUSER*
+NTUSER.DAT*
 NetHood
-OneDrive
-OpenVPN
+OpenVPN/log
 Pictures
 PrintHood
 Projects
 Recent
+Saved Games
 Searches
 SendTo
 Start Menu
 Templates
 Videos
-cache
-ntuser*
-scoop
+ntuser.ini
+scoop/apps
+scoop/bucket
+scoop/buckets
+scoop/cache
+scoop/persist/msys2
+scoop/persist/sumatrapdf/sumatrapdfcache
+scoop/persist/ungoogled-chromium
+scoop/shims
