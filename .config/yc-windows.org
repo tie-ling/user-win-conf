@@ -165,6 +165,10 @@ setx path "%path%;C:\Users\User\scoop\apps\msys2\current\clang64\bin;C:\Users\Us
 inside powershell terminal, run msys2 command to initialize it.
 msys2
 
+Run:
+pacman-key --init
+pacman-key --populate
+
 Update packages: pacman -Syu
 
 * install emacs and friends
@@ -173,7 +177,7 @@ clang64
 
 Info: Generate installed list: pacman -Qqe
 Info: Install packages: pacman -S
-Info: Remove packages with deps: pacmna -Rs [package]
+Info: Remove packages with deps: pacman -Rs [package]
 Info: Check Orphaned packages: pacman -Qdt
 
 mingw-w64-clang-x86_64-7zip
@@ -196,6 +200,8 @@ mingw-w64-ucrt-x86_64-rufus
 * add shortcut for emacs
 inside powershell terminal, run
 #+begin_src
+  mkdir "C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 Apps"
+
   $WshShell = New-Object -COMObject WScript.Shell
   $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\MSYS2 Apps\Emacs Client.lnk")
   $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\bin\emacsclientw.exe"
