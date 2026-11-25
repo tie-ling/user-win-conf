@@ -197,35 +197,35 @@ mingw-w64-ucrt-x86_64-rufus
 inside powershell terminal, run
 #+begin_src
   $WshShell = New-Object -COMObject WScript.Shell
-  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Emacs Client.lnk")
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\MSYS2 Apps\Emacs Client.lnk")
   $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\bin\emacsclientw.exe"
   $Shortcut.Arguments = '-c -n -a ""'
   $Shortcut.WorkingDirectory = "$env:USERPROFILE\Projects"
   $Shortcut.Save()
 
   $WshShell = New-Object -COMObject WScript.Shell
-  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\WezTerm.lnk")
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\MSYS2 Apps\WezTerm.lnk")
   $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\bin\wezterm-gui.exe"
   $Shortcut.Save()
 
   $WshShell = New-Object -COMObject WScript.Shell
-  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Notepad++.lnk")
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\MSYS2 Apps\Notepad++.lnk")
   $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\lib\notepad++\notepad++.exe"
   $Shortcut.Save()
 
   $WshShell = New-Object -COMObject WScript.Shell
-  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\VLC Media Player.lnk")
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\MSYS2 Apps\VLC Media Player.lnk")
   $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\bin\vlc.exe"
   $Shortcut.Save()
 
   $WshShell = New-Object -COMObject WScript.Shell
-  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Xournal++.lnk")
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\MSYS2 Apps\Xournal++.lnk")
   $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\bin\xournalpp-wrapper.exe"
   $Shortcut.Save()
 
 
   $WshShell = New-Object -COMObject WScript.Shell
-  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Rufus.lnk")
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\MSYS2 Apps\Rufus.lnk")
   $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\ucrt64\bin\rufus.exe"
   $Shortcut.Save()
 
@@ -234,7 +234,7 @@ inside powershell terminal, run
 * pin Start Menu to Quick Access for easier access to the programs
 #+begin_src
   $o = new-object -com shell.application
-  $o.Namespace("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\").Self.InvokeVerb("pintohome")
+  $o.Namespace("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\MSYS2 Apps\").Self.InvokeVerb("pintohome")
 #+end_src
 
 * german dictionary for the hunspell spellchecker

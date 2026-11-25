@@ -13,8 +13,12 @@
 AppData/Local
 AppData/LocalLow
 AppData/Roaming/.emacs.d
-AppData/Roaming/HP
-AppData/Roaming/Microsoft
+AppData/Roaming/Microsoft/Crypto
+AppData/Roaming/Microsoft/Protect
+AppData/Roaming/Microsoft/SystemCertificates
+AppData/Roaming/Microsoft/Windows/PowerShell
+AppData/Roaming/Microsoft/Windows/Recent Items/
+AppData/Roaming/Microsoft/Windows/Start Menu
 AppData/Roaming/Thunderbird
 AppData/Roaming/Verein zur Förderung eines Deutschen Forschungsnetzes
 AppData/Roaming/vlc
@@ -50,4 +54,5 @@ scoop/cache
 scoop/persist/msys2
 scoop/persist/sumatrapdf/sumatrapdfcache
 scoop/persist/ungoogled-chromium
+scoop/persist/winscp
 scoop/shims
