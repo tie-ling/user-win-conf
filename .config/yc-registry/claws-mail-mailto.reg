@@ -1,0 +1,37 @@
+Windows Registry Editor Version 5.00
+
+; Registers Claws Mail (MSYS2 CLANG64) as a mailto: handler for the current user.
+; Adjust the path below if MSYS2 lives elsewhere (e.g. C:\msys64\clang64\bin).
+; Afterwards choose it in Settings > Apps > Default apps > "MAILTO".
+;
+; To undo it, delete the key HKEY_CURRENT_USER\Software\Classes\ClawsMail.mailto 
+; and the folder HKEY_CURRENT_USER\Software\Clients\Mail\Claws Mail. 
+; Also delete the value "Claws Mail" under HKEY_CURRENT_USER\Software\RegisteredApplications.
+
+[HKEY_CURRENT_USER\Software\Classes\ClawsMail.mailto]
+@="URL:MailTo Protocol"
+"URL Protocol"=""
+"FriendlyTypeName"="Claws Mail"
+
+[HKEY_CURRENT_USER\Software\Classes\ClawsMail.mailto\DefaultIcon]
+@="\"C:\\Users\\User\\scoop\\apps\\msys2\\current\\clang64\\bin\\claws-mail.exe\",0"
+
+[HKEY_CURRENT_USER\Software\Classes\ClawsMail.mailto\shell\open\command]
+@="\"C:\\Users\\User\\scoop\\apps\\msys2\\current\\clang64\\bin\\claws-mail.exe\" --compose \"%1\""
+
+[HKEY_CURRENT_USER\Software\Clients\Mail\Claws Mail]
+@="Claws Mail"
+
+[HKEY_CURRENT_USER\Software\Clients\Mail\Claws Mail\shell\open\command]
+@="\"C:\\Users\\User\\scoop\\apps\\msys2\\current\\clang64\\bin\\claws-mail.exe\""
+
+[HKEY_CURRENT_USER\Software\Clients\Mail\Claws Mail\Capabilities]
+"ApplicationName"="Claws Mail"
+"ApplicationDescription"="GTK based e-mail client"
+"ApplicationIcon"="\"C:\\Users\\User\\scoop\\apps\\msys2\\current\\clang64\\bin\\claws-mail.exe\",0"
+
+[HKEY_CURRENT_USER\Software\Clients\Mail\Claws Mail\Capabilities\URLAssociations]
+"mailto"="ClawsMail.mailto"
+
+[HKEY_CURRENT_USER\Software\RegisteredApplications]
+"Claws Mail"="Software\\Clients\\Mail\\Claws Mail\\Capabilities"

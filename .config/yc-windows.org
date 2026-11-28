@@ -178,22 +178,36 @@ Info: Install packages: pacman -S
 Info: Remove packages with deps: pacman -Rs [package]
 Info: Check Orphaned packages: pacman -Qdt
 
+base
+base-devel
+bison
+filesystem
+flex
+git
 mingw-w64-clang-x86_64-7zip
 mingw-w64-clang-x86_64-clang
+mingw-w64-clang-x86_64-clang-analyzer
+mingw-w64-clang-x86_64-clang-tools-extra
+mingw-w64-clang-x86_64-claws-mail
 mingw-w64-clang-x86_64-diffutils
 mingw-w64-clang-x86_64-emacs
 mingw-w64-clang-x86_64-git
 mingw-w64-clang-x86_64-hunspell
 mingw-w64-clang-x86_64-hunspell-en
 mingw-w64-clang-x86_64-ledger
+mingw-w64-clang-x86_64-libetpan
+mingw-w64-clang-x86_64-lldb
+mingw-w64-clang-x86_64-llvm
 mingw-w64-clang-x86_64-mupdf-tools
 mingw-w64-clang-x86_64-notepad++
 mingw-w64-clang-x86_64-qrencode
+mingw-w64-clang-x86_64-quickjs
 mingw-w64-clang-x86_64-typst
 mingw-w64-clang-x86_64-vlc
 mingw-w64-clang-x86_64-wezterm
 mingw-w64-clang-x86_64-xournalpp
 mingw-w64-ucrt-x86_64-rufus
+msys2-runtime
 
 * add shortcut for emacs
 inside powershell terminal, run
@@ -233,6 +247,10 @@ inside powershell terminal, run
   $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\ucrt64\bin\rufus.exe"
   $Shortcut.Save()
 
+  $WshShell = New-Object -COMObject WScript.Shell
+  $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\MSYS2 Apps\Claws-Mail.lnk")
+  $Shortcut.TargetPath = "$env:USERPROFILE\scoop\apps\msys2\current\clang64\bin\claws-mail.exe"
+  $Shortcut.Save()
 #+end_src
 
 * pin Start Menu to Quick Access for easier access to the programs
