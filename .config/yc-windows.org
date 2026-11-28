@@ -1,8 +1,3 @@
-* BACKUP Thunderbird PROFILE!!!
-Save myself the time to setup email, calendar, contacts, etc.
-
-Open Thunderbird, Go to Hamburger Menu, then Tools, then Export
-
 * 7z split archive
 no compression, just copy, volume size 2048m
 
@@ -148,10 +143,13 @@ openvpn
 pdfcpu
 scantailor-advanced
 sumatrapdf
-thunderbird-esr
 ungoogled-chromium
 unison
 winscp
+claws-mail
+
+* or download and extract claws-mail myself
+https://www.claws-mail.org/
 
 * initialize msys2
 add environment variable for msys2
